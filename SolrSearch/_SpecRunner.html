@@ -52,8 +52,7 @@
     "text": "../lib/require/text",
     "durandal": "../lib/durandal/js",
     "plugins": "../lib/durandal/js/plugins",
-    "transitions": "../lib/durandal/js/transitions",
-    "dataaccess": "../lib/solrsearch/dataaccess"
+    "transitions": "../lib/durandal/js/transitions"
   }
 });
     
@@ -67,15 +66,9 @@
     function launchTest() {
     require([
       
-        
-        'viewmodels/search' ,
-      
-        
-        'viewmodels/shell' 
-      
     ],
     function(){
-      require(['test/specs/dev/search.spec.js','test/specs/dev/shell.spec.js','.grunt/grunt-contrib-jasmine/reporter.js'], function(){
+      require(['test/specs/build/main.spec.js','.grunt/grunt-contrib-jasmine/reporter.js'], function(){
         startTests();
       });
     }

@@ -7,8 +7,7 @@
         'knockout': '../lib/knockout/knockout-3.1.0',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'jquery': '../lib/jquery/jquery-1.9.1',
-        'jquery-ui': '../lib/jquery-ui/jquery-ui',
-        'dataaccess': '../lib/solrsearch/dataaccess'
+        'jquery-ui': '../lib/jquery-ui/jquery-ui'
         },
     shim: {
         'bootstrap': {

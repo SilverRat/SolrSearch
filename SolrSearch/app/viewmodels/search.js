@@ -68,7 +68,7 @@ define(['plugins/http', 'plugins/router', 'durandal/app', 'knockout', 'jquery', 
                 query.sort = this.Sort().Value;
             }
             if (this.Page() && this.Page() > 1) {
-                query.start = this.Page();
+                query.start = (this.Page() - 1) * 10; //TODO: this should be serer-side config.
             }
             if (this.Group() === true) {
                 query.group = true;
@@ -83,9 +83,6 @@ define(['plugins/http', 'plugins/router', 'durandal/app', 'knockout', 'jquery', 
                     break;
                 }
             }
-
-            var start = (this.Page() - 1) * 10;
-            if (start < 0) { start = 0; }
 
             this.IsLoading(true);
             var self = this;
